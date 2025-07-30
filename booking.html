@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking</title>
-    
+    <title>Craftsvilla - Booking</title>
+
     <!-- Ekstern CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- Google Fonts -->
@@ -31,10 +31,81 @@
         <li><a href="index.html">Hjem</a></li>
         <li><a href="gallery.html">Galleri</a></li>
         <li><a href="facilities.html">Fasiliteter</a></li>
-        <li><a href="booking.html">Booking</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
         <li><a href="feedback.html">Tilbakemelding</a></li>
       </ul>
     </nav>
+
+    <section class="booking-page wrapper">
+      <div class="booking-content">
+        <!-- Booking-skjema -->
+        <form class="booking-form">
+          <h2>Book din kreative stund her!</h2>
+
+          <input type="text" placeholder="Navn" required />
+          <input type="email" placeholder="E-post" required />
+
+          <div class="booking-row">
+            <select>
+              <option disabled selected>Fasilitet</option>
+              <option>Kunststudio</option>
+              <option>Keramikkverksted</option>
+              <option>Snekkerverksted</option>
+              <option>Musikk Studio</option>
+              <option>Systua</option>
+              <option>Flerbruksrom</option>
+            </select>
+
+            <select>
+              <option disabled selected>Legg til produkt</option>
+              <option>Mosaikk kunst</option>
+              <option>Akvarellmaling</option>
+              <option>Lerretsmaling</option>
+              <option>Keramikk og porselen</option>
+              <option>Trearbeid</option>
+              <option>Strikking, hekling og sy</option>
+              <option>Annet</option>
+            </select>
+          </div>
+
+          <textarea
+            placeholder="Eventuelle spørsmål eller kommentarer til bookingen?"
+          ></textarea>
+
+          <div class="booking-row">
+            <input type="number" placeholder="Antall personer" min="1" />
+
+            <div class="form-group">
+              <label>Spesiell anledning?</label>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="occasion" value="ja" /> Ja</label
+                >
+                <label
+                  ><input type="radio" name="occasion" value="nei" /> Nei</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit">Bekreft booking</button>
+        </form>
+
+        <!-- Kalender -->
+        <div class="calendar-box">
+          <h3>Velg ønsket dato</h3>
+
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FOslo&showPrint=0&hl=no&src=MWRmYzdmYWUwMzUwM2E5ZWVkOTM2ZGMxNDY5ZmFlMDE1ZDM0ODc0ZmIyYTUwMWM5MTgyY2ZjZjU1ZDIyMzEzMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ubm9yd2VnaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23e67c73&color=%230b8043"
+            style="border: 0; border-radius: 25px"
+            width="100%"
+            height="500"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <p>&copy; 2025 Craftsvilla. Alle rettigheter reservert.</p>
